@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+</head>
+<body>
+
+    <!-- 1-stop autocomplete -->
+    <form autocomplete="off" method="post">
+        
+        
+        <fieldset>
+            <legend>Employee Details</legend>
+
+            <!-- 2-First Name: required , letters only -->
+            <div>
+                <label>First name: </label>
+                <input type="text" name="firstName" required pattern="[A-Za-zأ-ي\s]+" title="Please enter letters only">
+            </div>
+
+            <!-- 3-Last Name: at least 5 characters -->
+            <div>
+                <label>Last name: </label>
+                <input type="text" name="lastName" minlength="5">
+            </div>
+
+            <!-- 4-Gender: required -->
+            <div>
+                <input type="radio" name="gender" value="male" id="male" required>
+                <label for="male">Male</label>
+                <input type="radio" name="gender" value="female" id="female" required>
+                <label for="female">Female</label>
+            </div>
+
+           
+            <div>
+                <label>Employee ID: </label>
+                <input type="text" name="employeeId">
+            </div>
+
+            
+            <div>
+                <label>Designation: </label>
+                <input type="text" name="designation">
+            </div>
+
+            <!--5- Mobile: 11 characters , numbers only , 010 , 011 , 012 , 015 -->
+            <div>
+                <label>Phone Number: </label>
+                <input type="tel" name="mobile" pattern="01[0125][0-9]{8}" maxlength="11" title="Must start with 010, 011, 012, or 015 and be 11 digits">
+            </div>
+
+            <!--6- Date of birth: required -->
+            <div>
+                <label>Date of Birth: </label>
+                <input type="date" name="dob" required>
+            </div>
+
+            <!--7- Courses: (select with filter) - datalist -->
+            <div>
+                <label>Courses: </label>
+                <input list="coursesList" name="course">
+                <datalist id="coursesList">
+                    <option value="HTML"></option>
+                    <option value="CSS"></option>
+                    <option value="JavaScript"></option>
+                    <option value="React"></option>
+                </datalist>
+            </div>
+
+            <!-- 8-Upload image: image only .png -->
+            <div>
+                <label>Upload Image: </label>
+                <input type="file" name="userImage" accept=".png">
+            </div>
+
+            <!--9- Tracks: (checkbox) auto select on 1 of it -->
+            <div>
+                <label>Tracks: </label>
+                <input type="checkbox" name="track" value="frontend" checked>
+                <label>Frontend</label>
+                <input type="checkbox" name="track" value="backend">
+                <label>Backend</label>
+                <input type="checkbox" name="track" value="network">
+                <label>Network</label>
+            </div>
+
+            <!-- 10-Range: start with 10 end 100 -->
+            <div>
+                <label>Level: </label>
+                <input type="range" name="range" min="10" max="100" value="10">
+            </div>
+
+            <!-- 11-Comment: multi line , required -->
+            <div>
+                <label>Comment: </label>
+                <textarea name="comment" required rows="4" cols="50"></textarea>
+            </div>
+
+            <!-- Submit -->
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+
+        </fieldset>
+    </form>
+
+</body>
+</html>
