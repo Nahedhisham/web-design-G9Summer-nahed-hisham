@@ -1,11 +1,11 @@
-/* إعادة تعيين الهوامش الأساسية */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* --- Utility Classes (طريقة الباشمهندسة) --- */
+
 
 .bg-light {
     background-color: #ececec;
@@ -22,7 +22,7 @@
 
 .w-100 {
     width: 100%;
-    display: block; /* للتخلص من الفراغ الصغير الافتراضي أسفل الصورة */
+    display: block; 
 }
 
 .text-gray {
@@ -34,7 +34,7 @@
     font-weight: bold;
 }
 
-/* --- Layout Styles --- */
+
 
 .container {
     width: 80%;
@@ -46,17 +46,17 @@
     margin-bottom: 3%;
 }
 
-/* تنسيق الـ Card وطريقة عرضه جنب بعضه */
+
 .card {
     width: 30%;
     background-color: white;
     display: inline-block;
-    vertical-align: top; /* يضمن محاذاة الكروت من الأعلى تماماً */
+    vertical-align: top; 
     box-shadow: 0px 0px 6px 2px lightgray;
-    text-align: left; /* لبداية النصوص من اليسار داخل الكارت */
+    text-align: left; 
 }
 
-/* المسافة المئوية بين الكروت (30% + 5% + 30% + 5% + 30% = 100%) */
+
 .margin-left-right {
     margin-left: 5%;
     margin-right: 5%;
