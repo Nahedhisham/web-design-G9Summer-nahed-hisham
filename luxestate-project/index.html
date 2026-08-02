@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxestate - Modern Real Estate</title>
+  <style>
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+    :root {
+      --yellow: #ffcc00;
+      --navy: #172b36;
+      --bg-gray: #f8f9fa;
+    }
+
+    body { color: #333; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    
+    
+    .btn { padding: 12px 28px; font-weight: bold; border: none; cursor: pointer; display: inline-block; }
+    .btn-yellow { background-color: var(--yellow); color: var(--navy); }
+    .btn-dark { background-color: var(--navy); color: #fff; }
+    .btn-outline { border: 2px solid var(--navy); background: transparent; color: var(--navy); }
+
+    
+    .header { padding: 20px 0; }
+    .header .container { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 24px; font-weight: 800; color: var(--navy); }
+    .nav-links { display: flex; gap: 25px; list-style: none; font-weight: 600; }
+    
+    .hero { padding: 40px 0 80px; }
+    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    .hero h1 { font-size: 44px; color: var(--navy); margin-bottom: 25px; line-height: 1.2; }
+    .search-box { display: flex; box-shadow: 0 5px 20px rgba(0,0,0,0.1); max-width: 400px; }
+    .search-box input { border: none; padding: 15px; width: 100%; outline: none; }
+    
+    .hero-img-box { position: relative; }
+    .hero-img-box img { width: 100%; height: 380px; object-fit: cover; border-radius: 4px; }
+    .hero-bar { position: absolute; bottom: 0; width: 100%; background: var(--yellow); padding: 15px; display: flex; justify-content: space-around; font-weight: bold; }
+
+    
+    .stats { background: var(--bg-gray); padding: 70px 0; }
+    .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+    .stats-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .stat-card { background: #fff; padding: 30px; text-align: center; border-radius: 4px; }
+    .stat-card h3 { font-size: 32px; color: var(--yellow); }
+
+    
+    .apartments { padding: 80px 0; }
+    .apartments h2 { font-size: 32px; color: var(--navy); margin-bottom: 30px; }
+    .apartments-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-bottom: 40px; }
+    .card { background: #fff; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    .card img { width: 100%; height: 200px; object-fit: cover; }
+    .card-body { padding: 20px; }
+    .card-footer { display: flex; justify-content: space-between; margin-top: 15px; border-top: 1px solid #eee; padding-top: 10px; }
+    .price { font-weight: 800; color: var(--yellow); font-size: 18px; }
+    
+    .apartments-bottom { display: flex; justify-content: space-between; align-items: center; }
+
+    
+    .features { padding: 50px 0; }
+    .feature-row { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; margin-bottom: 60px; }
+    .feature-row.reverse { direction: rtl; }
+    .feature-row.reverse .content { direction: ltr; }
+    .feature-img { position: relative; }
+    .feature-img img { width: 100%; height: 300px; object-fit: cover; border-radius: 4px; }
+    .tag-btn { position: absolute; bottom: -15px; right: 20px; background: var(--yellow); padding: 10px 20px; font-weight: bold; }
+
+    
+    .footer { background: var(--navy); color: #fff; padding: 70px 0 30px; }
+    .footer-top { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 40px; margin-bottom: 40px; }
+    .sub-box { display: flex; background: rgba(255,255,255,0.1); border-radius: 4px; overflow: hidden; }
+    .sub-box input { background: transparent; border: none; padding: 12px; color: #fff; outline: none; }
+    .footer-grid { display: grid; grid-template-columns: 2fr repeat(3, 1fr); gap: 30px; }
+    .footer-col h4 { margin-bottom: 15px; opacity: 0.6; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+
+    
+    @media (max-width: 768px) {
+      .hero-grid, .stats-grid, .feature-row, .apartments-grid, .footer-grid { grid-template-columns: 1fr !important; }
+      .feature-row.reverse { direction: ltr; }
+    }
+  </style>
+</head>
+<body>
+
+  
+  <header class="header">
+    <div class="container">
+      <div class="logo">luxestate</div>
+      <ul class="nav-links">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Appartments</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <button class="btn btn-yellow">Join Us</button>
+    </div>
+  </header>
+
+  
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1>Find Your New<br>Modern Apartment</h1>
+        <div class="search-box">
+          <input type="text" placeholder="Search location...">
+          <button class="btn btn-yellow">Search</button>
+        </div>
+      </div>
+      <div class="hero-img-box">
+        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600" alt="Apartment">
+        <div class="hero-bar">
+          <span>📞 (000) 123-4567</span>
+          <span>📍 Melbourne, Australia</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="stats">
+    <div class="container stats-grid">
+      <div>
+        <h2>Our's Company<br>Statistics</h2>
+        <p style="color: #666; margin-top: 15px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="stats-cards">
+        <div class="stat-card"><h3>741</h3><p>Subscribers</p></div>
+        <div class="stat-card"><h3>3854</h3><p>Apartments</p></div>
+        <div class="stat-card"><h3>24</h3><p>Employees</p></div>
+        <div class="stat-card"><h3>14</h3><p>Awards</p></div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="apartments">
+    <div class="container">
+      <h2>More Than 500+<br>Apartments For Rent</h2>
+      
+      <div class="apartments-grid">
+        
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=400" alt="Room">
+          <div class="card-body">
+            <h4>Random Street Apartment</h4>
+            <div class="card-footer">
+              <span class="price">$3,500</span>
+              <span style="color:#777;">2 BD | 2 BA</span>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400" alt="Room">
+          <div class="card-body">
+            <h4>Random Street Apartment</h4>
+            <div class="card-footer">
+              <span class="price">$3,500</span>
+              <span style="color:#777;">2 BD | 2 BA</span>
+            </div>
+          </div>
+        </div>
+
+    
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400" alt="Room">
+          <div class="card-body">
+            <h4>Random Street Apartment</h4>
+            <div class="card-footer">
+              <span class="price">$3,500</span>
+              <span style="color:#777;">2 BD | 2 BA</span>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400" alt="Room">
+          <div class="card-body">
+            <h4>Random Street Apartment</h4>
+            <div class="card-footer">
+              <span class="price">$3,500</span>
+              <span style="color:#777;">2 BD | 2 BA</span>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=400" alt="Room">
+          <div class="card-body">
+            <h4>Random Street Apartment</h4>
+            <div class="card-footer">
+              <span class="price">$3,500</span>
+              <span style="color:#777;">2 BD | 2 BA</span>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=400" alt="Room">
+          <div class="card-body">
+            <h4>Random Street Apartment</h4>
+            <div class="card-footer">
+              <span class="price">$3,500</span>
+              <span style="color:#777;">2 BD | 2 BA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="apartments-bottom">
+        <div class="search-box">
+          <input type="text" placeholder="Search location...">
+          <button class="btn btn-yellow">Search</button>
+        </div>
+        <button class="btn btn-outline">View All Apartments</button>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="features">
+    <div class="container">
+      <!-- Feature 1 -->
+      <div class="feature-row">
+        <div class="feature-img">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500" alt="Building">
+          <a href="#" class="tag-btn">Show More Details</a>
+        </div>
+        <div class="content">
+          <h3 style="font-size:26px; color:var(--navy);">You & Family First</h3>
+          <p style="color:#666; margin-top:10px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+
+      
+      <div class="feature-row reverse">
+        <div class="feature-img">
+          <img src="https://images.unsplash.com/photo-1506146332389-18140dc7b2fb?w=500" alt="Building">
+          <a href="#" class="tag-btn">Show More Details</a>
+        </div>
+        <div class="content">
+          <h3 style="font-size:26px; color:var(--navy);">Awesome Apartments</h3>
+          <p style="color:#666; margin-top:10px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+
+      
+      <div class="feature-row">
+        <div class="feature-img">
+          <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=500" alt="Building">
+        </div>
+        <div class="content">
+          <h3 style="font-size:26px; color:var(--navy);">Modern Architecture</h3>
+          <p style="color:#666; margin:10px 0 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <button class="btn btn-dark">Read More</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <h2 style="font-size:28px;">Luxestate<br>Explore Real Estate</h2>
+        <div class="sub-box">
+          <input type="email" placeholder="Subscribe To Our Newsletter">
+          <button class="btn btn-yellow">→</button>
+        </div>
+      </div>
+
+      <div class="footer-grid">
+        <div>
+          <h3 style="margin-bottom:15px;">luxestate</h3>
+          <p style="opacity:0.5; font-size:13px;">© 2026 - All Rights Reserved</p>
+        </div>
+        <div class="footer-col">
+          <h4>LUXESTATE</h4>
+          <ul><li><a href="#">Agents</a></li><li><a href="#">Hunters</a></li></ul>
+        </div>
+        <div class="footer-col">
+          <h4>COMPANY</h4>
+          <ul><li><a href="#">About</a></li><li><a href="#">FAQ</a></li><li><a href="#">Contact</a></li></ul>
+        </div>
+        <div class="footer-col">
+          <h4>SERVICES</h4>
+          <ul><li><a href="#">Renting</a></li><li><a href="#">Selling</a></li><li><a href="#">Building</a></li></ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
