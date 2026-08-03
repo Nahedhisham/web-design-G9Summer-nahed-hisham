@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f1f5f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    gap: 25px;
+}
+
+
+.card-4 {
+    grid-column: 2 / 3;
+    margin-top: 40px;
+}
+
+.option-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 30px 25px;
+    position: relative;
+    overflow: hidden; 
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.option-card h3 {
+    font-size: 18px;
+    color: #1e293b;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+    transition: color 0.4s ease;
+}
+
+.option-card p {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.5;
+    position: relative;
+    z-index: 2;
+    transition: color 0.4s ease;
+}
+
+
+.arrow-icon {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    color: #ffffff;
+    font-size: 14px;
+    z-index: 3;
+    transition: transform 0.3s ease;
+}
+
+
+.card-1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 140px;
+    height: 140px;
+    background-color: #3b82f6; 
+    border-bottom-left-radius: 100%; 
+    transition: all 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.card-1:hover::before {
+    width: 500px;
+    height: 500px;
+    border-bottom-left-radius: 0;
+}
+
+.card-1:hover h3,
+.card-1:hover p {
+    color: #ffffff;
+}
+
+
+.card-2::before,
+.card-3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 65px;
+    height: 65px;
+    background-color: #475569; 
+    border-bottom-left-radius: 100%;
+    transition: all 0.4s ease;
+    z-index: 1;
+}
+
+.card-2:hover::before,
+.card-3:hover::before {
+    width: 500px;
+    height: 500px;
+    border-bottom-left-radius: 0;
+    background-color: #3b82f6;
+}
+
+.card-2:hover h3, .card-2:hover p,
+.card-3:hover h3, .card-3:hover p {
+    color: #ffffff;
+}
+
+
+.card-4 .card-icon {
+    color: #64748b;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.card-4:hover {
+    border-color: #3b82f6;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.1);
+}
+
+.card-4:hover .card-icon {
+    color: #3b82f6;
+}
