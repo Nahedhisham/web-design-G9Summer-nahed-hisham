@@ -1,0 +1,190 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+    background:#ececec;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+
+.container{
+
+    width:80%;
+    margin:50px auto;
+}
+
+/* Flip Card */
+
+.flip-card{
+
+    width:320px;
+    height:450px;
+
+    margin:auto;
+
+    perspective:1000px;
+}
+
+
+
+.card-inner{
+
+    width:100%;
+    height:100%;
+
+    position:relative;
+
+    transition:1s;
+
+    transform-style:preserve-3d;
+}
+
+.flip-card:hover .card-inner{
+
+    transform:rotateY(180deg);
+}
+
+
+
+.card-front,
+.card-back{
+
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    backface-visibility:hidden;
+}
+
+/* Front */
+
+.card-front img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+
+
+.front-content{
+
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    padding:20px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.55);
+}
+
+/* Title */
+
+.front-content h2{
+
+    color:white;
+
+    font-size:24px;
+
+    line-height:35px;
+}
+
+/* Button */
+
+.front-content button{
+
+    width:50px;
+    height:50px;
+
+    border-radius:50%;
+
+    border:2px solid white;
+
+    background:transparent;
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+}
+
+/* Back */
+
+.card-back{
+
+    background:white;
+
+    transform:rotateY(180deg);
+
+    padding:35px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+}
+
+/* Logo */
+
+.logo{
+
+    width:60px;
+
+    margin-bottom:20px;
+}
+
+/* Heading */
+
+.card-back h2{
+
+    color:#23395d;
+
+    margin-bottom:20px;
+
+    line-height:35px;
+}
+
+/* Paragraph */
+
+.card-back p{
+
+    color:#777;
+
+    line-height:28px;
+
+    margin-bottom:40px;
+}
+
+/* Link */
+
+.card-back a{
+
+    color:#0d6efd;
+
+    text-decoration:none;
+
+    font-weight:bold;
+}
