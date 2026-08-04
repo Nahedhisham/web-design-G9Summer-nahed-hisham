@@ -1,0 +1,45 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    width: 90%;
+    margin: 40px auto;
+}
+
+
+.track {
+    background-color: #000;
+    padding: 20px 10px;
+    border-radius: 8px;
+    overflow: hidden; 
+}
+
+
+.car-img {
+    width: 160px;
+    display: block;
+    
+  
+    animation: driveCar 3.5s linear infinite alternate;
+}
+
+
+.car-img:hover {
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+@keyframes driveCar {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+       
+        transform: translateX(calc(100% - 160px));
+    }
+}
